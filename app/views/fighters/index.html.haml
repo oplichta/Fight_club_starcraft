@@ -1,0 +1,7 @@
+%h1 Fighters club
+= link_to "New fighter", new_fighter_path
+-@fighters.each do |fighter|
+  = link_to (image_tag fighter.image.url(:medium)), fighter_path(fighter)
+  = fighter.name
+  = fighter.last_name
+  = fighter.description
