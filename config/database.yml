@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  database: Fight_club_development
+  pool: 5
+  timeout: 5000
+  min_messages: ERROR
+test:
+  adapter: postgresql
+  database: Fight_club_test
+  pool: 5
+  timeout: 5000
+  min_messages: ERROR
+
+production:
+  adapter: postgresql
+  database: Fight_club_production
+  pool: 5
+  timeout: 5000
+  min_messages: ERROR
