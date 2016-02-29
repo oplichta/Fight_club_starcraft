@@ -3,5 +3,7 @@ FactoryGirl.define do
     name "MyString"
     last_name "MyString"
     description "MyString"
+    image Rack::Test::UploadedFile.new(Rails.root +
+    'spec/fixtures/images/zergling.png', 'image/png')
   end
 end

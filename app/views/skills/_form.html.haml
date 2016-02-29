@@ -1,0 +1,4 @@
+= form_for [fighter, fighter.skills.new] do |f|
+  = f.text_field :name, placeholder: 'Add name of skill...'
+  = f.text_field :value, placeholder: 'Add value of skill...'
+  = f.button :Submit, class: 'btn'

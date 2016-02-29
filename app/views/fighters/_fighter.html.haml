@@ -1,0 +1,10 @@
+.fighter
+  .image.center-block
+    = link_to (image_tag fighter.image.url(:medium), class:'img-responsive'), fighter_path(fighter)
+  = fighter.name
+  = fighter.last_name
+  = fighter.description
+
+  - if fighter.skills.any?
+    = render fighter.skills.last(4), fighter: fighter
+  = render 'skills/form', fighter: fighter
