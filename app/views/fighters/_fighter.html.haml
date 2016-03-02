@@ -4,7 +4,8 @@
   = fighter.name
   = fighter.last_name
   = fighter.description
-
+  = fighter.win
+  = fighter.lose
+  = fighter.experience
   - if fighter.skills.any?
-    = render fighter.skills.last(4), fighter: fighter
-  = render 'skills/form', fighter: fighter
+    = render fighter.skills.last(8), fighter: fighter

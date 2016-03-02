@@ -1,4 +1,6 @@
 %h1 Fighters club
-= link_to "New fighter", new_fighter_path
+= link_to 'New fighter', new_fighter_path
+= link_to 'New fight', new_fight_path
+= link_to 'All fights', fights_path
 -@fighters.each do |fighter|
   = render 'fighter', fighter: fighter

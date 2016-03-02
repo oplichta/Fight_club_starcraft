@@ -1,0 +1,10 @@
+-# = simple_form_for @fight do |f|
+-#   = f.association :fighter, label_method: :lastname, value_method: :id, include_blank: false
+-#   = f.association :fighter_2, label_method: :lastname, value_method: :id, include_blank: false
+-#   = f.button :submit
+= simple_form_for @fight do |f|
+  = f.label "Select the first fighter", class: 'form-inputs'
+  = f.collection_select(:fighter_id, Fighter.all, :id, :name)
+  = f.label "Select the second fighter", class: 'form-inputs'
+  = f.collection_select(:fighter_2_id, Fighter.all, :id, :name)
+  = f.button :submit

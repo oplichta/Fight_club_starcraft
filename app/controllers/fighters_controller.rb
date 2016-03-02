@@ -8,7 +8,11 @@ class FightersController < ApplicationController
   end
 
   def create
-    @fighter = Fighter.create(fighter_params)
+    @fighter = Fighter.new(fighter_params)
+    @fighter.experience = 0
+    @fighter.win = 0
+    @fighter.lose = 0
+    @fighter.save
     redirect_to @fighter
   end
 

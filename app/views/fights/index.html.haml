@@ -1,0 +1,4 @@
+%h1 Fights
+= link_to "New fight", new_fight_path
+-@fights.each do |fight|
+  = render 'fight', fight: fight

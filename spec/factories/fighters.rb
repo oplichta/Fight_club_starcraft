@@ -5,5 +5,6 @@ FactoryGirl.define do
     description "MyString"
     image Rack::Test::UploadedFile.new(Rails.root +
     'spec/fixtures/images/zergling.png', 'image/png')
+    experience '10'
   end
 end
