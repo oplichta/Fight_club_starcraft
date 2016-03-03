@@ -1,0 +1,22 @@
+.form-wrapper
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        .panel
+          %h4.text-center Upload an image (this is required):
+          - if @fighter.image.exists?
+            .text-center
+              = image_tag @fighter.image.url(:medium), id: 'image-preview', class: 'img-responsive'
+          - else
+            = image_tag 'placeholder.png', id: 'image-preview', class: 'img-responsive'
+          = simple_form_for @fighter, html: { class: 'form-horizontal', multipart: true } do |f|
+            .form-group
+              = f.input :image, as: :file, label: false, input_html: { onChange: 'loadFile(event)' }
+            .form-group
+              = f.input :name
+            .form-group
+              = f.input :last_name
+            .form-group
+              = f.input :description
+            .form-group
+              = f.button :submit, class: 'btn-success btn-block'

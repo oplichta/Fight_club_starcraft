@@ -6,5 +6,8 @@ FactoryGirl.define do
     image Rack::Test::UploadedFile.new(Rails.root +
     'spec/fixtures/images/zergling.png', 'image/png')
     experience '10'
+    win '0'
+    lose '0'
+    fights_count '0'
   end
 end

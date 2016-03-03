@@ -1,11 +1,29 @@
-.fighter
-  .image.center-block
-    = link_to (image_tag fighter.image.url(:medium), class:'img-responsive'), fighter_path(fighter)
-  = fighter.name
-  = fighter.last_name
-  = fighter.description
-  = fighter.win
-  = fighter.lose
-  = fighter.experience
-  - if fighter.skills.any?
-    = render fighter.skills.last(8), fighter: fighter
+.fighter.container
+  .row
+    .col-md-6.col-md-offset-3
+      .fighter-header
+        = link_to (image_tag fighter.image.url(:medium), class:'img-responsive img-circle'), fighter_path(fighter)
+      .fighter-bottom
+        .list-group
+          .list-group-item
+            %h4 Name
+            = fighter.name
+          .list-group-item
+            %h4 Last name
+            = fighter.last_name
+          .list-group-item
+            %h4 description
+            = fighter.description
+          .list-group-item
+            %h4 Fights won
+            = fighter.win
+          .list-group-item
+            %h4 Fights lost
+            = fighter.lose
+          .list-group-item
+            %h4 Experience
+            = fighter.experience
+      .skills.list-group-item
+        %h4 Skills
+        - if fighter.skills.any?
+          = render fighter.skills.last(8), fighter: fighter

@@ -1,18 +1,197 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-color: #fafafa;
+  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+h1 {
+  margin-left: 25%;
+}
+
+.navbar{ margin-bottom: 0; }
+
+.alert { margin-bottom: 0px; }
+
+.navbar-brand {
+  a {
+    color: #125688;
+  }
+}
+
+.navbar-default {
+  background-color: #fff;
+  height: 54px;
+  .navbar-nav li a {
+    color: #125688;
+  }
+}
+
+.navbar-container {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.fighters-wrapper {
+  padding-top: 40px;
+  margin: 0 auto;
+  max-width: 642px;
+  width: 100%;
+}
+
+.fighter {
+  background-color: #fff;
+  border-color: #edeeee;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  margin-bottom: 60px;
+  .fighter-head {
+    flex-direction: row;
+    height: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+    color: #125688;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .image {
+    border-bottom: 1px solid #eeefef;
+    border-top: 1px solid #eeefef;
+  }
+}
+
+.fighter-bottom {
+  .user-name, .skill-content {
+    display: inline;
+  }
+  .caption {
+    margin-bottom: 7px;
+  }
+  .user-name {
+    font-weight: 500;
+    margin-right: 0.3em;
+    color: #125688;
+    font-size: 15px;
+  }
+  .user-name, .caption-content {
+    display: inline;
+  }
+  .skill {
+    margin-top: 7px;
+    .user-name {
+      font-weight: 500;
+      margin-right: 0.3em;
+    }
+    .delete-skill {
+      float: right;
+      color: #515151;
+    }
+  }
+  margin-bottom: 7px;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.skill_content {
+  font-size: 15px;
+  line-height: 18px;
+  border: medium none;
+  width: 100%;
+  color: #4B4F54;
+}
+
+.skill-like-form {
+  padding-top: 24px;
+  margin-top: 13px;
+  margin-left: 24px;
+  margin-right: 24px;
+  min-height: 68px;
+  align-items: center;
+  border-top: 1px solid #EEEFEF;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-wrapper {
+  margin: 20px auto;
+  .panel {
+    padding: 40px;
+    border: 1px solid #eeefef;
+    border-radius: 3px;
+    img { padding: 24px; }
+  }
+}
+
+.edit-links {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.skill_content{
+  min-width: 80%;
+  margin-right: 15px;
+}
+
+.registration-bg {
+  padding-top: 4em;
+  padding-bottom: 14%;
+  height: 100%;
+  background: url(photo-background.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+  padding: 24px;
+  .panel-heading{
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+.sign-in-bg {
+  padding-top: 4em;
+  padding-bottom: 18%;
+  height: 100%;
+  background-image: url(signin-bg.jpeg);
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#image-preview {
+  margin: 0px auto;
+}
+
+.fighter-header {
+  padding: 20px 0;
+}
+
+.fighter-image {
+  margin: 20px auto;
+  height: 152px;
+  width: 152px;
+}
+
+.fight-button {
+
+  margin: 20px auto
+}

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :skill do
-    fighter nil
+    fighter
     name "MyString"
     value 1
   end

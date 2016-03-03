@@ -1,4 +1,13 @@
-%h1 Fights
-= link_to "New fight", new_fight_path
--@fights.each do |fight|
-  = render 'fight', fight: fight
+.container
+  .row
+    .col-md-6.col-md-offset-3
+      %h1 Fights
+      %table.table.table-bordered.table-striped
+        %thead
+          %tr
+            %th First fighter
+            %th Second fighter
+            %th Winner
+        %tbody
+        -@fights.each do |fight|
+          = render 'fight', fight: fight

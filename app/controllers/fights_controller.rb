@@ -19,23 +19,24 @@ class FightsController < ApplicationController
 
     a = sum(player)
     b = sum(player_2)
-
-    if a >= b
-      flash[:success] = player.name + ' wins'
-      player.win += 1
-      player_2.lose += 1
-      player.experience += 20
-      player_2.experience += 10
-      @fight.winner_id = fight_params[:fighter_id]
-    else
-      flash[:success] = player_2.name + ' wins'
-      player_2.win += 1
-      player.lose += 1
-      player.experience += 10
-      player_2.experience += 20
-      @fight.winner_id = fight_params[:fighter_2_id]
-    end
-
+      if a >= b
+        flash[:success] = player.name + ' wins'
+        player.win += 1
+        player_2.lose += 1
+        player.experience += 20
+        player_2.experience += 10
+        @fight.winner_id = fight_params[:fighter_id]
+      else
+        flash[:success] = player_2.name + ' wins'
+        player_2.win += 1
+        player.lose += 1
+        player.experience += 10
+        player_2.experience += 20
+        @fight.winner_id = fight_params[:fighter_2_id]
+      end
+    # end
+    player.fights_count += 1
+    player_2.fights_count += 1
     @fight.save
     player.save
     player_2.save
@@ -53,7 +54,6 @@ class FightsController < ApplicationController
       s += skill.value
       s += fighter.experience * 2
     end
-    puts fighter.id.to_s + 'aaaaaaaaaaaaa' + s.to_s
     return s
   end
 

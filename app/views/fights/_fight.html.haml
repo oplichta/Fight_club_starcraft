@@ -1,3 +1,7 @@
-= fight.winner_id
-= fight.fighter_id
-= fight.fighter_2_id
+%tr
+  %td
+    = fight.fighter.name
+  %td
+    = Fighter.find(fight.fighter_2_id).name
+  %td
+    = Fighter.find(fight.winner_id).name

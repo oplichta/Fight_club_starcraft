@@ -12,8 +12,14 @@ class FightersController < ApplicationController
     @fighter.experience = 0
     @fighter.win = 0
     @fighter.lose = 0
-    @fighter.save
-    redirect_to @fighter
+    @fighter.fights_count = 0
+    if @fighter.save
+      flash[:success] = 'Now add minimum 3 skills to your fighter!'
+      redirect_to @fighter
+    else
+      flash[:alert] = 'Halt! You need an image to create fighter!'
+      render :new
+    end
   end
 
   def show

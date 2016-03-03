@@ -6,8 +6,8 @@ feature 'Creating skills' do
     visit '/'
     find(:xpath, "//a[contains(@href,\"fighters/1\")]").click
     fill_in 'Add name of skill...', with: 'speed'
-    fill_in 'Add value of skill...', with: '5'
-    click_button 'Submit'
+    fill_in 'Add value of skill 1-5', with: '5'
+    click_button 'submit'
     expect(page.current_path).to eq(fighter_path(1))
     expect(page).to have_content('speed 5')
   end
