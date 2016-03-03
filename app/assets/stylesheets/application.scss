@@ -63,31 +63,8 @@ h1 {
 }
 
 .fighter-bottom {
-  .user-name, .skill-content {
+ .skill-content {
     display: inline;
-  }
-  .caption {
-    margin-bottom: 7px;
-  }
-  .user-name {
-    font-weight: 500;
-    margin-right: 0.3em;
-    color: #125688;
-    font-size: 15px;
-  }
-  .user-name, .caption-content {
-    display: inline;
-  }
-  .skill {
-    margin-top: 7px;
-    .user-name {
-      font-weight: 500;
-      margin-right: 0.3em;
-    }
-    .delete-skill {
-      float: right;
-      color: #515151;
-    }
   }
   margin-bottom: 7px;
   padding-top: 24px;
@@ -133,11 +110,10 @@ h1 {
   margin-bottom: 40px;
 }
 
-.skill_content{
+.skill-content{
   min-width: 80%;
   margin-right: 15px;
 }
-
 
 .panel {
   border-radius: 8px;
@@ -167,3 +143,4 @@ h1 {
 .fight-button { margin: 20px auto; }
 
 .skills { margin: 15px; }
+.form-item { margin: 15px;}

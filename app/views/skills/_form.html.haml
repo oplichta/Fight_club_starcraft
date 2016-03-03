@@ -3,9 +3,9 @@
     .col-md-6.col-md-offset-3
       .panel
         = simple_form_for([@fighter, @fighter.skills.build]) do |f|
-          .form-group
-            .form-group-item
+          .form-group.text-center
+            .form-item
               = f.input :name, placeholder: 'Add name of skill...', label: false
-            .form-group-item
+            .form-item
               = f.input :value, collection: 0..5
-            = f.button :submit, class: 'btn btn-success'
+          = f.button :submit, class: 'btn btn-success btn-block'
