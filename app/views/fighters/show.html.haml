@@ -1,2 +1,3 @@
 = render 'fighter', fighter: @fighter
-= render 'skills/form', fighter: @fighter
+- if @fighter.skills.size <= 8
+  = render 'skills/form', fighter: @fighter

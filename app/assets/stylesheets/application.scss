@@ -138,43 +138,16 @@ h1 {
   margin-right: 15px;
 }
 
-.registration-bg {
-  padding-top: 4em;
-  padding-bottom: 14%;
-  height: 100%;
-  background: url(photo-background.jpeg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.log-in{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  border: none;
-}
 
 .panel {
   border-radius: 8px;
   padding: 24px;
+  margin: 5px;
   .panel-heading{
     h1 {
       text-align: center;
     }
   }
-}
-
-.sign-in-bg {
-  padding-top: 4em;
-  padding-bottom: 18%;
-  height: 100%;
-  background-image: url(signin-bg.jpeg);
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 #image-preview {
@@ -191,7 +164,6 @@ h1 {
   width: 152px;
 }
 
-.fight-button {
+.fight-button { margin: 20px auto; }
 
-  margin: 20px auto
-}
+.skills { margin: 15px; }

@@ -15,6 +15,9 @@
             %h4 description
             = fighter.description
           .list-group-item
+            %h4 Fights count
+            = fighter.fights_count
+          .list-group-item
             %h4 Fights won
             = fighter.win
           .list-group-item
@@ -26,4 +29,6 @@
       .skills.list-group-item
         %h4 Skills
         - if fighter.skills.any?
-          = render fighter.skills.last(8), fighter: fighter
+          = render fighter.skills.last(9), fighter: fighter
+        - else fighter.skills.size
+          %h3 You need minimum 3 skills to your fighter!

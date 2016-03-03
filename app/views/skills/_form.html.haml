@@ -1,8 +1,11 @@
 .container
   .row
     .col-md-6.col-md-offset-3
-      = form_for [fighter, fighter.skills.new] do |f|
-        .form-group
-          = f.text_field :name, placeholder: 'Add name of skill...'
-          = f.text_field :value, placeholder: 'Add value of skill 1-5'
-        = f.button :submit, class: 'btn btn-success'
+      .panel
+        = simple_form_for([@fighter, @fighter.skills.build]) do |f|
+          .form-group
+            .form-group-item
+              = f.input :name, placeholder: 'Add name of skill...', label: false
+            .form-group-item
+              = f.input :value, collection: 0..5
+            = f.button :submit, class: 'btn btn-success'

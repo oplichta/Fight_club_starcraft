@@ -1,6 +1,6 @@
 class FightersController < ApplicationController
   def index
-    @fighters = Fighter.all.order('created_at DESC')
+    @fighters = Fighter.all.order('experience DESC')
   end
 
   def new

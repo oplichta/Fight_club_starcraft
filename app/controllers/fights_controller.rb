@@ -19,6 +19,7 @@ class FightsController < ApplicationController
 
     a = sum(player)
     b = sum(player_2)
+    if player.skills.size > 2 && player_2.skills.size > 2
       if a >= b
         flash[:success] = player.name + ' wins'
         player.win += 1
@@ -34,16 +35,16 @@ class FightsController < ApplicationController
         player_2.experience += 20
         @fight.winner_id = fight_params[:fighter_2_id]
       end
-    # end
-    player.fights_count += 1
-    player_2.fights_count += 1
-    @fight.save
-    player.save
-    player_2.save
-    redirect_to fights_path
-  end
-
-  def edit
+      player.fights_count += 1
+      player_2.fights_count += 1
+      @fight.save
+      player.save
+      player_2.save
+      redirect_to fights_path
+    else
+      flash[:error] = 'One of players dont have at least 3 skills'
+      redirect_to fights_path
+    end
   end
 
   private
