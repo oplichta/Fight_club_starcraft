@@ -1,13 +1,7 @@
 == README
 * Fight club app with Starcraft 2 units :) For the swarm! :)
 
-* Ruby version
-  2.2.3
-* System dependencies
-  Postgresql 9.4 database
-
-* Database creation
-* Database initialization
-  rake db:setup db:migrate
-* How to run the test suite
-  rspec
+* Ruby version ->  2.2.3
+* System dependencies ->  Postgresql 9.4 database
+* Database initialization -> rake db:setup db:migrate
+* How to run the test suite ->  rspec
